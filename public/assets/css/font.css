@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'kalpurush';
+  src: url(../fonts/kalpurush.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
+
+
+
+
+
+.font-kalpurush {
+  font-family: 'kalpurush', sans-serif;
+}
+
+.font-NatoSerifBengali {
+  font-family: 'NatoSerifBengali', sans-serif;
+}
+
+
