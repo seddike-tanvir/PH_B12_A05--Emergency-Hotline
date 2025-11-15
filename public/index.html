@@ -15,8 +15,11 @@
     <!-- Add tailwindCSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- ad fontawesome -->
+    <!-- add fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- add alertNotify.pages.dev er stylesheet -->
+    <link rel="stylesheet" href="./assets/components/alertnotify/themes/es-special.css"/>
 
   </head>
 
@@ -28,15 +31,15 @@
             </div>
             <div class="navbar_btn_area flex flex-row justify-between gap-2 items-center">
                 <div class="nav_button_type1 h-max flex flex-row px-[25px] py-[10px] items-center rounded-[25px] bg-[#41ff6a37]">
-                    <p class="counter font-bold inline-block">0</p>&nbsp;
+                    <p class="counter font-bold inline-block"><span id="favCounter">0</span></p>&nbsp;
                     <i class="fa-solid fa-heart text-red-700 inline-block"></i> 
                 </div>
                 <div class="nav_button_type1 h-max flex flex-row px-[25px] py-[10px] items-center rounded-[25px] bg-[#41ff6a37]">
-                    <p class="counter font-bold inline-block">20</p>&nbsp;
+                    <p class="counter font-bold inline-block">0</p>&nbsp;
                     <img src="./assets/files/coin.png" alt="" class="inline-block w-[17px] h-[17px] mt-[-2px]"> 
                 </div>
                 <div class="nav_button_type1 h-max flex flex-row px-[25px] py-[10px] items-center rounded-[25px] bg-[#00A63E] text-white">
-                    <p class="counter font-bold inline-block"><span id="copyCounter">20</span> Copy</p> 
+                    <p class="counter font-bold inline-block"><span id="copyCounter">0</span> Copy</p> 
                 </div>
             </div>
       </section>  
@@ -60,7 +63,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/emergency.png" alt="ambulance_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">জাতীয় জরুরি সেবা</p>
@@ -71,8 +74,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">সার্বজনীন</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -81,7 +84,7 @@
                         <div class="p-3 rounded-[10px] bg-[#dfefff]">
                             <img src="./assets/files/police.png" alt="police_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">পুলিশ</p>
@@ -92,8 +95,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">পুলিশ</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -102,7 +105,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/fire-service.png" alt="fire-service_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">ফায়ার সার্ভিস</p>
@@ -113,8 +116,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">ফায়ার</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -123,7 +126,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/ambulance.png" alt="ambulance_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">অ্যাম্বুলেন্স</p>
@@ -134,8 +137,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">স্বাস্থ্য</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -144,7 +147,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/emergency.png" alt="emergency_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">নারী ও শিশু সহায়তা</p>
@@ -155,8 +158,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">সহায়তা</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -165,7 +168,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/emergency.png" alt="emergency_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">দুদক</p>
@@ -176,8 +179,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">সরকারি</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -186,7 +189,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/emergency.png" alt="emergency_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">বিদ্যুৎ বিভ্রাট</p>
@@ -197,8 +200,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">বিদ্যুৎ</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -207,7 +210,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/emergency.png" alt="emergency_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">আস-সুন্নাহ ফাউন্ডেশন</p>
@@ -218,8 +221,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">এনজিও</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -228,7 +231,7 @@
                         <div class="p-3 rounded-[10px] bg-red-200">
                             <img src="./assets/files/emergency.png" alt="emergency_logo" class="w-[1.8rem] h-auto">
                         </div>
-                        <i class="fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
+                        <i class="favBtn fa-regular fa-heart p-[0rem] text-[1.2rem] text-gray-500 cursor-pointer"></i>
                     </div>
                     <div class="cardTitle mt-4 pl-2 min-h-[5rem]">
                         <p class="title font-NatoSerifBengali text-[1.3rem] font-bold">বাংলাদেশ রেলওয়ে</p>
@@ -239,8 +242,8 @@
                         <p class="caller-catagory font-NatoSerifBengali bg-[#f2f2f2] px-[15px] py-[5px] mt-[2px] rounded-lg w-max text-[.8rem] font-sm ">পরিবহন</p>
                     </div>
                     <div class="cardFooter_btnArea mt-6 flex flex-row justify-between gap-8">
-                        <button class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer" id="copyBtn"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
-                        <button class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
+                        <button type="button" class="copyBtn bg-[#f2f2f2] py-[5px] pr-3 rounded-lg w-full text-gray-800 text-[.8rem] font-sm border border-gray-500 cursor-pointer"><i class="fa-regular fa-clone"></i>&nbsp; Copy </button>
+                        <button type="button" class="callBtn bg-[#00a63e] py-[5px] pr-3 rounded-lg w-full text-white text-[.8rem] font-sm border-2 border-[#00a63e] cursor-pointer"><i class="fa-solid fa-phone"></i>&nbsp; Call </button>
                     </div>
                 </div>
 
@@ -301,7 +304,11 @@
       </section>
 
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://alertnotify.pages.dev/alertNotify/alertNotify.min.js"></script>
       <script src="./assets/js/allFuntion.js"></script>
+      <script src="./assets/js/doCopy.js"></script>
+      <script src="./assets/js/makeCall.js"></script>
+      <script src="./assets/js/favCount.js"></script>
       <script src="./assets/js/script.js"></script>
 
 
@@ -312,7 +319,6 @@
         // let number = "09610-001089";
         //     makeCall(name,number);
 
-        document.getElementsByClassName("copyBtn").onclick = increaseCopyCount();
       </script>
 
 
