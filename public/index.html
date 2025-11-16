@@ -35,7 +35,7 @@
                     <i class="fa-solid fa-heart text-red-700 inline-block"></i> 
                 </div>
                 <div class="nav_button_type1 h-max flex flex-row px-[25px] py-[10px] items-center rounded-[25px] bg-[#41ff6a37]">
-                    <p class="counter font-bold inline-block">0</p>&nbsp;
+                    <p class="counter font-bold inline-block"><span id="coinCounter">100</span></p>&nbsp;
                     <img src="./assets/files/coin.png" alt="" class="inline-block w-[17px] h-[17px] mt-[-2px]"> 
                 </div>
                 <div class="nav_button_type1 h-max flex flex-row px-[25px] py-[10px] items-center rounded-[25px] bg-[#00A63E] text-white">
@@ -253,12 +253,12 @@
                     <div class="historyCardHeader flex flex-row justify-between items-center">
                         <p class="p-[0rem] text-[1.2rem]"><i class="fa-regular fa-clock fa-heart text-gray-500"></i>&nbsp; Call History</p>
                         <div class="nav_button_type1 h-max flex flex-row px-[18px] py-[10px] items-center rounded-[25px] bg-[#00A63E] text-white cursor-pointer">
-                            <p class="counter font-semibold inline-block">Clear</p> 
+                            <p class="clearBtn font-semibold inline-block" id="clearBtn">Clear</p> 
                         </div>
                     </div>
 
-                    <div class="historyBodyWrapper mt-[1.5rem] mx-[.3rem]">
-                        <div class="historyCard flex flex-row justify-between items-center bg-green-50 px-[.5rem] py[1rem] my-[1rem] rounded-md border border-green-200">
+                    <div class="historyBodyWrapper mt-[1.5rem] mx-[.3rem]" id="historyBodyWrapper">
+                        <!-- <div class="historyCard flex flex-row justify-between items-center bg-green-50 px-[.5rem] py[1rem] my-[1rem] rounded-md border border-green-200">
                             <div class="historyCard_callerInfo my-[.5rem]">
                                 <p class="title font-NatoSerifBengali text-[.95rem] font-bold">পুলিশ</p>
                                 <p class="title text-[.9rem] text-gray-500 font-normal">999</p>
@@ -288,7 +288,7 @@
                                 <p class="title text-[.9rem] text-gray-500 font-normal">999</p>
                             </div>
                             <p class="historyCard_timeInfo text-[.9rem] text-gray-700 font-normal">11:36:25 AM</p>
-                        </div>
+                        </div> -->
 
                     </div>
             </div>
@@ -305,10 +305,11 @@
 
       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script src="https://alertnotify.pages.dev/alertNotify/alertNotify.min.js"></script>
-      <script src="./assets/js/allFuntion.js"></script>
+      <!-- <script src="./assets/js/allFuntion.js"></script> -->
+      <script src="./assets/js/favCount.js"></script>
       <script src="./assets/js/doCopy.js"></script>
       <script src="./assets/js/makeCall.js"></script>
-      <script src="./assets/js/favCount.js"></script>
+      <script src="./assets/js/updateCallHistory.js"></script>
       <script src="./assets/js/script.js"></script>
 
 
@@ -318,6 +319,10 @@
         // let name = "আস-সুন্নাহ ফাউন্ডেশন";
         // let number = "09610-001089";
         //     makeCall(name,number);
+
+
+
+
 
       </script>
 
