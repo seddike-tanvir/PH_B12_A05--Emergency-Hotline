@@ -27,10 +27,12 @@ Questions and Answers -->>
 
 
 
+
 # Ques 02 : How do you **create and insert a new element into the DOM**?
 
 ### Ans :
         using appendChild i can insert a new element to the dom. for creating a new element i will use createElement"
+
 
 
 
@@ -43,6 +45,7 @@ Questions and Answers -->>
         - When an event occurs on an element, the event handler for that specific element executes first.
         - Then, the event "bubbles up" the DOM tree, triggering the same type of event handler on its parent element, then its grandparent, and so on, all the way up to the document object.
         - Example: You click a button inside a div inside the body. The button's click handler runs first, then the div's click handler, then the body's click handler (assuming they all exist).
+
 
 
 
