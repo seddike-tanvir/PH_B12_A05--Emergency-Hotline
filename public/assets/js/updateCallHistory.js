@@ -40,6 +40,7 @@ const clearBtn = document.getElementById("clearBtn");
 
 clearBtn.addEventListener("click", function(){
     emptyCallHistory();
+    alertNotify(`Call History Cleared!`, 'success', 3000);
 })
 
 
